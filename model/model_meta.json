@@ -1,0 +1,182 @@
+{
+  "model_name": "Heart Disease Predictive Pipeline (StandardScaler + RandomForest)",
+  "n_samples": 1025,
+  "features": [
+    "age",
+    "sex",
+    "cp",
+    "trestbps",
+    "chol",
+    "fbs",
+    "restecg",
+    "thalach",
+    "exang",
+    "oldpeak",
+    "slope",
+    "ca",
+    "thal"
+  ],
+  "metrics": {
+    "accuracy": 0.9805,
+    "precision": 0.981,
+    "recall": 0.981,
+    "f1_score": 0.981,
+    "roc_auc": 0.999,
+    "cv_mean": 0.9824,
+    "cv_std": 0.01
+  },
+  "feature_importances": {
+    "cp": 0.1511,
+    "ca": 0.1205,
+    "thal": 0.1093,
+    "oldpeak": 0.1078,
+    "thalach": 0.1076,
+    "age": 0.0897,
+    "exang": 0.082,
+    "chol": 0.068,
+    "trestbps": 0.0644,
+    "slope": 0.0476,
+    "sex": 0.0267,
+    "restecg": 0.0169,
+    "fbs": 0.0085
+  },
+  "feature_ranges": {
+    "age": {
+      "min": 29.0,
+      "max": 77.0,
+      "mean": 54.43,
+      "median": 56.0
+    },
+    "sex": {
+      "min": 0.0,
+      "max": 1.0,
+      "mean": 0.7,
+      "median": 1.0
+    },
+    "cp": {
+      "min": 0.0,
+      "max": 3.0,
+      "mean": 0.94,
+      "median": 1.0
+    },
+    "trestbps": {
+      "min": 94.0,
+      "max": 200.0,
+      "mean": 131.61,
+      "median": 130.0
+    },
+    "chol": {
+      "min": 126.0,
+      "max": 564.0,
+      "mean": 246.0,
+      "median": 240.0
+    },
+    "fbs": {
+      "min": 0.0,
+      "max": 1.0,
+      "mean": 0.15,
+      "median": 0.0
+    },
+    "restecg": {
+      "min": 0.0,
+      "max": 2.0,
+      "mean": 0.53,
+      "median": 1.0
+    },
+    "thalach": {
+      "min": 71.0,
+      "max": 202.0,
+      "mean": 149.11,
+      "median": 152.0
+    },
+    "exang": {
+      "min": 0.0,
+      "max": 1.0,
+      "mean": 0.34,
+      "median": 0.0
+    },
+    "oldpeak": {
+      "min": 0.0,
+      "max": 6.2,
+      "mean": 1.07,
+      "median": 0.8
+    },
+    "slope": {
+      "min": 0.0,
+      "max": 2.0,
+      "mean": 1.39,
+      "median": 1.0
+    },
+    "ca": {
+      "min": 0.0,
+      "max": 4.0,
+      "mean": 0.75,
+      "median": 0.0
+    },
+    "thal": {
+      "min": 0.0,
+      "max": 3.0,
+      "mean": 2.32,
+      "median": 2.0
+    }
+  },
+  "presets": {
+    "healthy": {
+      "label": "Healthy Active Adult",
+      "description": "38-year-old female with normal BP, healthy cholesterol, high exercise capacity, and no angina.",
+      "data": {
+        "age": 38,
+        "sex": 0,
+        "cp": 2,
+        "trestbps": 115,
+        "chol": 185,
+        "fbs": 0,
+        "restecg": 0,
+        "thalach": 178,
+        "exang": 0,
+        "oldpeak": 0.2,
+        "slope": 2,
+        "ca": 0,
+        "thal": 2
+      }
+    },
+    "high_risk": {
+      "label": "High Risk Cardiac Patient",
+      "description": "62-year-old male with hypertension, chest pain, elevated ST depression, and arterial narrowing.",
+      "data": {
+        "age": 62,
+        "sex": 1,
+        "cp": 0,
+        "trestbps": 155,
+        "chol": 298,
+        "fbs": 1,
+        "restecg": 1,
+        "thalach": 118,
+        "exang": 1,
+        "oldpeak": 3.4,
+        "slope": 0,
+        "ca": 2,
+        "thal": 3
+      }
+    },
+    "moderate_risk": {
+      "label": "Borderline / Moderate Risk",
+      "description": "54-year-old male with borderline BP, moderate cholesterol, and slight exercise ST depression.",
+      "data": {
+        "age": 54,
+        "sex": 1,
+        "cp": 1,
+        "trestbps": 135,
+        "chol": 245,
+        "fbs": 0,
+        "restecg": 0,
+        "thalach": 145,
+        "exang": 0,
+        "oldpeak": 1.2,
+        "slope": 1,
+        "ca": 1,
+        "thal": 2
+      }
+    }
+  }
+}
